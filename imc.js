@@ -1,25 +1,17 @@
-let poids = prompt('Votre poids en Kg ? : ');
-let taille = prompt('Votre taille en Cm ? : ');
-
 function calculerImc(poids, taille) {
 
+    //calculer la taille en metres
+    let tailleEnMetre = taille / 100
+    let tailleCalculee = Math.pow(tailleEnMetre, 2);
 
-    // parsing de string en number
-    let numpoids = Number(poids);
+    let resultat = poids / tailleCalculee
 
-    // parsing de string en number
-    let numtaille = Number(taille);
-
-    //Conversion metre ne centimetre
-    let convMetreEnCentimetre = numtaille / 100;
-
-    //carre de la taille
-    let finalTaille = Math.pow(convMetreEnCentimetre, 2);
-
-    //Calcul Final
-    return calculImc = numpoids / finalTaille;
-
-
+    return resultat;
 }
 
-calculerImc(70, 169);
+let poids = prompt("Votre poids en Kg:");
+//poids = parseInt(poids);
+let taille = prompt("Votre taille en cm:");
+//taille = Number(taille);
+
+alert(calculerImc(poids, taille));
