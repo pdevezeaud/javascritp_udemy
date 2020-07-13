@@ -1,3 +1,8 @@
+let poids = prompt("Votre poids en Kg:");
+//poids = parseInt(poids);
+let taille = prompt("Votre taille en cm:");
+//taille = Number(taille);
+
 function calculerImc(poids, taille) {
 
     //calculer la taille en metres
@@ -9,9 +14,5 @@ function calculerImc(poids, taille) {
     return resultat;
 }
 
-let poids = prompt("Votre poids en Kg:");
-//poids = parseInt(poids);
-let taille = prompt("Votre taille en cm:");
-//taille = Number(taille);
 
 alert(calculerImc(poids, taille));
