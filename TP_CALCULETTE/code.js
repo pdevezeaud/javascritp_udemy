@@ -1,5 +1,8 @@
 
 
+let premierNombre;
+let secondNombre;
+
 do {
 
     choix = prompt("Que souhaitez vous faire\n\n 1 - Addition\n  2 - Multiplication\n  3 - Soustraction\n  4 - Division\n");
@@ -8,7 +11,14 @@ do {
 
 switch (choix) {
     case "1":
-        console.log("Je fais une addition");
+        do {
+    
+            premierNombre = prompt("Entrer le premier nombre : ");
+            premierNombre = Number(premierNombre);
+            deuxiemeNombre = prompt("Entrez le second nombre : ");
+            deuxiemeNombre = Number(deuxiemeNombre);
+            
+        } while ( isNaN(premierNombre,deuxiemeNombre));
         break;
 
     case "2":
