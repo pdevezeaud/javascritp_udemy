@@ -1,5 +1,6 @@
 let premierNombre;
 let deuxiemeNombre;
+let resultat;
 
 
 
@@ -24,32 +25,35 @@ switch (choix) {
         
         function addition(nombreA, nombreB)
         {
-            let resultat = nombreA + nombreB;
-            return resultat;
-           
+            resultat = nombreA + nombreB;
+            return resultat;   
         }
 
-        console.log(addition(premierNombre,deuxiemeNombre));
-
+        addition(premierNombre,deuxiemeNombre);
         break;
+        
+        
         
         
         case "2":
             do {
                 
                 premierNombre = prompt("Entrer le premier nombre : ");
-                nombreA = Number(premierNombre);
+                premierNombre = Number(premierNombre);
                 deuxiemeNombre = prompt("Entrez le second nombre : ");
                 deuxiemeNombre = Number(deuxiemeNombre);
                 
             } while (isNaN(premierNombre, deuxiemeNombre));
             
-            function multiplication(nombreA, nombreB){
-                
-                let resultatMultiplication = nombreA * nombreB;
-                return resultatmultiplication;
-            }
+            function multiplication(nombreA, nombreB)
+        {
+            resultat = nombreA * nombreB;
+            return resultat;   
+        }
+
+        multiplication(premierNombre,deuxiemeNombre);
             break;
+
             
             case "3":
                 do {
@@ -61,34 +65,44 @@ switch (choix) {
                     
                 } while (isNaN(premierNombre, deuxiemeNombre));
                 
-                function soustraction(nombreA, nombreB){
-                    
-                    let resultatSoustraction = nombreA - nombreB;
-                    return resultatSoustraction;
-                }
+                function soustraction(nombreA, nombreB)
+        {
+            resultat = nombreA - nombreB;
+            return resultat;   
+        }
+
+        soustraction(premierNombre,deuxiemeNombre);
                 break;
                 
                 case "4":
                     do {
                         
                         premierNombre = prompt("Entrer le premier nombre : ");
-                        let nombreA = Number(premierNombre);
+                        premierNombre = Number(premierNombre);
                         deuxiemeNombre = prompt("Entrez le second nombre : ");
                         deuxiemeNombre = Number(deuxiemeNombre);
                         
                     } while (isNaN(premierNombre, deuxiemeNombre));
                     
-                    function division(nombreA, nombreB){
-                        
-                        let resultatDivision = nombreA / nombreB;
-                        return resultatDivision;
+                    function division(nombreA, nombreB)
+                    {
+                        resultat = nombreA / nombreB;
+                        return resultat;   
                     }
+            
+                    division(premierNombre,deuxiemeNombre);
                     break;
                     
                     default:
                         console.log("les choix autorisée : 1 à 4 !!!")
                         break;
                     }
+
+            alert("resultat de l'operation du choix "+ choix +" est : " + resultat);
+
+  
+
+                    
 
 
 
