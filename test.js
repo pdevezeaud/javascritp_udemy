@@ -1,10 +1,9 @@
-let age = 18, statut = "étudiant";
-if(age < 18 || statut == "étudiant") {
-    console.log('Partie 1');
+
+function recupererRecetteSecreteDuCocaCola() {
+    var ingredientSecret = "Les bulles gazeuses de l'antarctique";
+    return "Ceci est secret";
 }
-else if(age == 18 && statut != "étudiant") {
-    console.log('Partie 2');
-}
-else {
-    console.log('Partie 3');
-}
+ 
+recupererRecetteSecreteDuCocaCola();
+ 
+console.log(ingredientSecret);
