@@ -1,18 +1,21 @@
 let premierNombre;
 let deuxiemeNombre;
 let resultat;
+let autreCalcul = true;
+let error;
 
-
+while (autreCalcul == true ) {
 
 do {
 
     choix = prompt("Que souhaitez vous faire\n\n 1 - Addition\n  2 - Multiplication\n  3 - Soustraction\n  4 - Division\n");
 
-} while (choix == "" || choix == null)
+} while (choix == "" || choix == null || choix >=5)
 
 
-switch (choix) {
+switch (choix){ 
 
+   
     case "1":
         do {
 
@@ -92,14 +95,27 @@ switch (choix) {
             
                     division(premierNombre,deuxiemeNombre);
                     break;
+
+
                     
                     default:
-                        console.log("les choix autorisée : 1 à 4 !!!")
+                        alert("les choix autorisée : 1 à 4 !!!");
                         break;
-                    }
+                }   
 
             alert("resultat de l'operation du choix "+ choix +" est : " + resultat);
+            
+             let autreChoix = prompt("Un autre calcul (o/n) ? : ")
+              if (autreChoix == "o") {
 
+                  autreCalcul = true;
+              }else{
+                autreCalcul = false;
+                alert("Fin du programme")
+            }            
+             
+        }
+                
   
 
                     
