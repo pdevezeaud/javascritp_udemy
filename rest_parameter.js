@@ -4,12 +4,16 @@
 
 function addition(...nombre){
    
+    let resultat = 0;
     
     //on cree une fonction fléchée à partir de nombre.
     //pout iterer sur les arguments de nombre.
     nombre.forEach(nombre => {
-            console.log(nombre);
-    });
-}
+            
+        resultat += nombre;
+            
+        });
+        return resultat;
+    }
 
-addition(4,9,5,415,78,54);
+console.log(addition(10, 10, 10));
