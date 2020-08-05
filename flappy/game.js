@@ -1,6 +1,8 @@
 
 //https://www.youtube.com/watch?v=0ArCFchlTq4 7:20
 
+//https://www.youtube.com/watch?v=eXKmDfa8qWU&t=135s
+
 // Draw canvas
 const cvs = document.getElementById("Bird");
 const ctx = cvs.getContext("2d");
