@@ -1,14 +1,18 @@
 
+//selectionner les elements
 let btn = document.querySelector('button');
 let div = document.querySelector('div');
 
+// afficher est à true le message est caché
 let afficher = true;
 
-div.style.display = "none";
+//cacher le message
+div.style.display = "none"; 
 
+//detection du click 
 btn.addEventListener('click', () => {
     if(afficher){
-        btn.textContent = "cacher";
+        btn.textContent = "Cacher";
         div.style.display="block";
         afficher = false;
     }else {
