@@ -1,15 +1,16 @@
-
-//On recupere le HTML
 let citation = document.querySelector('#citation');
 let auteur = document.querySelector('#auteur');
 let nouveau = document.querySelector('#nouveau');
 
-// variable
-let nombreAleatoire;
-let dernier=[0];
+
+// va stocker le nombre de la fonction generer nombrealeatoire
+let nombreAleatoire = 0;
+
+//correspond à l'index 0 du tableau
+let dernier= 0;
 
 
-//tableau plusieurs dimensions
+// tableau citation
 let citations = [
   ["La vie est un mystère qu'il faut vivre, et non un problème à résoudre.", "Gandhi"],
   ["Le plus grand risque est de ne prendre aucun risque.", "Mark Zuckerberg"],
@@ -34,22 +35,31 @@ let citations = [
   ["Un pessimiste voit la difficulté dans chaque opportunité. Un optimiste voit une opportunité dans chaque difficulté.", "Winston Churchill"]
 ];
 
-let nbreElementCitation = citations.length;
-console.log(nbreElementCitation);
+// generer nombre aleatoire
+
+function genererNombreEntier(max) {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
 
 
 
-  nouveau.addEventListener('click', ()=>{
+// eventement sur le bouton nouvelle sitation
+nouveau.addEventListener('click', () => {
+
     do {
 
-      
-    } while (condition);
+        nombreAleatoire = genererNombreEntier(citations.length);
 
-  
-  });
+    // tant que nombrealeatoire et égal à dernier on continu    
+    } while (nombreAleatoire == dernier);
+   
+    //on recupere id de la citation on modifie le contenu en recuperant le chiffre de nombreAleatoire. on accède au tableau citations avec l'index 0 et 1
+    citation.textContent = citations[nombreAleatoire][0];
+    auteur.textContent = citations[nombreAleatoire][1];
+    
+    //pour eviter de reselection la meme citation on modofie la variable dernier, ce qui evite de repartir sur la meme deux fois.
+    dernier = nombreAleatoire;
 
-  // function genererNombreEntier() {
+    
+});
 
-  //   nombreAleatoire =  Math.floor(Math.random() * Math.floor(max));
-  //   return nombreAleatoire;
-  // }
