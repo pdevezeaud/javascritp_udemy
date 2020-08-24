@@ -57,7 +57,7 @@ nouveau.addEventListener('click', () => {
     citation.textContent = citations[nombreAleatoire][0];
     auteur.textContent = citations[nombreAleatoire][1];
     
-    //pour eviter de reselection la meme citation on modofie la variable dernier, ce qui evite de repartir sur la meme deux fois.
+    //pour eviter de reselection la meme citation on modifie la variable---> dernier, ce qui evite de repartir sur la meme deux fois.
     dernier = nombreAleatoire;
 
     
