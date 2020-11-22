@@ -1,6 +1,11 @@
 
 // CONSTRUCTEUR BASE
 
+// constructeur Principale (nombreDePattes, poids)
+
+// oiseau (nombreDePattes, poids / longueurDesAiles)
+// Mammifer (nombreDePattes, poids / typeDePoils)
+
 function Animal(nombreDePattes, poids) {
     this.nombreDePattes = nombreDePattes;
     this.poids         = poids;
@@ -17,7 +22,7 @@ function Animal(nombreDePattes, poids) {
     Animal.call(this, nombreDePattes, poids); // La fonction Call() permet d'appeler une fonction constructeur : en premier paramètre on donne l'objet actuel (this), ensuite, on donne les arguments pour son constructeur 
     this.longueurDesAiles = longueurDesAiles;
   }
-  Oiseau.prototype = Object.create(Animal.prototype); // On change les informations en donnant un nouvel objet qui sera le prototype de notre constructeur animal
+  Oiseau.prototype = Object.create(Animal.prototype); // On change les informations en donnant un nouvel objet qui sera le prototype de notre constructeur soit animal et non object
   Oiseau.prototype.constructor = Oiseau; // On redéfinit la valeur de Oiseau.prototype.constructor car elle a été changée avec le changement de prototype
   
   
