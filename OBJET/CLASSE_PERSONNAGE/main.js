@@ -19,10 +19,11 @@ class Personnage {
             this.sante == 0; 
             console.log(this.pseudo + " a perdu !")
         }
+        console.log("la santé est de " + this.sante);
         
     }
 
-    get informations(){
+    get getinformations(){
         return this.pseudo + "( " + this.classe + " )" + " a " + this.sante + " points de vie et au niveau " + this.niveau + " !";
     }
 }
@@ -32,5 +33,7 @@ class Personnage {
 merlin = new Personnage("Merlin","Magicien",100,15);
 console.log(merlin);
 console.log(merlin.evoluer());
+console.log(merlin.verifierSante());
+console.log(merlin.getinformations);
 
 
