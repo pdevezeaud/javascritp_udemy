@@ -9,17 +9,28 @@ class Personnage {
         this.niveau  = 1;
     }
         
-}
-
-function evoluer(pseudo){
-    pseudo += 1;
-    return pseudo;
-}
-
-function verifierSante(sante){
-    if (sante <= 0) {
-        sante = 0; 
+     evoluer(){
+        this.niveau ++;
+        console.log(this.pseudo + " passe au niveau " + this.niveau + " !")
     }
-    return sante;
+    
+    verifierSante(){
+        if (this.sante <= 0) {
+            this.sante == 0; 
+            console.log(this.pseudo + " a perdu !")
+        }
+        
+    }
+
+    get informations(){
+        return this.pseudo + "( " + this.classe + " )" + " a " + this.sante + " points de vie et au niveau " + this.niveau + " !";
+    }
 }
+
+
+
+merlin = new Personnage("Merlin","Magicien",100,15);
+console.log(merlin);
+console.log(merlin.evoluer());
+
 
