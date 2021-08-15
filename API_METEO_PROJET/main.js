@@ -1,29 +1,44 @@
-//const url = 'https://lesoublisdelinfo.com/api.php';  //pour get
-const url = 'https://lesoublisdelinfo.com/api.php?prenom=John';  //pour POST
+let ville = "Paris";
+recevoirTemperature(ville)
 
-let requete = new XMLHttpRequest();
+let changerVille = document.querySelector('#changer');
 
-//GET
-requete.open("GET", url);
-requete.responseType = 'json';
-requete.send();
-
-//POST
-requete.open('POST', url);
-// on envoi à l'api
-requete.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-requete.responseType = 'json';
-requete.send('prenom=John&nom=Doe');
+changerVille.addEventListener('click', () => {
+     ville = prompt("Quelle ville souhaitez vous voir ?");
+     recevoirTemperature(ville);
+});
 
 
-requete.onload = function() {
-    if (requete.readyState === XMLHttpRequest.DONE) {
-        if(requete.status === 200) {
-            let reponse = requete.response;
-            console.log(reponse);
+function recevoirTemperature(ville){
 
-        } else {
-            alert('Un problème est intervenu, merci de revenir plus tard');
+    const url = 'https://api.openweathermap.org/data/2.5/weather?q=' + ville + '&appid=a7da75044719ccd7ca2ee4780cb08ab0&units=metric';
+
+
+    let requete = new XMLHttpRequest();
+    requete.open('GET', url);
+
+    requete.responseType = 'json';
+
+    requete.send();
+
+    requete.onload = function () {
+        if (requete.readyState === XMLHttpRequest.DONE) {
+            //on verifie le status
+            if (requete.status === 200) {
+                //si tout est ok dans les deux conditions on peut stocke la reponse
+                let reponse = requete.response; //on stock la reponse
+                // si on veut recuperer la temperature de la ville (chemin json)
+                let temperature = reponse.main.temp;
+                let ville = reponse.name;
+                document.querySelector('#ville').textContent = ville;
+                document.querySelector('#temperature_label').textContent = temperature;
+            }
+            else {
+                alert('Un problème est intervenu, merci de revenir plus tard.');
+            }
         }
     }
 }
+
+
+//setInterval(recevoirTemperature, 5000);
