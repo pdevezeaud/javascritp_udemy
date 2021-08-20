@@ -1,4 +1,4 @@
-.body {
+body {
     background-size: cover;
     background: #2980B9;
     background: -webkit-linear-gradient(to right, #FFFFFF, #6DD5FA, #2980B9);
@@ -32,10 +32,10 @@
   background-color: rgba(43,78, 101, 0.75);
 }
 
-#Humidity {
+#humidity {
   background-color: rgba(52,152,219,0.75);
 }
 
-#Wind {
+#wind {
   background-color: rgba(143,146,154,0.75);
 }
