@@ -3,11 +3,7 @@
 //on ecoute l'evenement sur ID cp et l'input.
 document.querySelector('#cp').addEventListener('input', function () {
     //on test si il entre 5 carateres 
-<<<<<<< HEAD
-    if (this.value.length == 5) {
-=======
     if(this.value.length == 5) {
->>>>>>> 6830fac8b73a0af507088efeb8d117cb7c494f1e
         let url = `https://geo.api.gouv.fr/communes?codePostal=${this.value}&fields=nom,code,codesPostaux,codeDepartement,codeRegion,population&format=json&geometry=centre`;
 
         fetch(url).then((reponse) =>
