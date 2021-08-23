@@ -84,20 +84,70 @@
  * 
  * Async & Await
  */
- async function test() {
-  return await new Promise(
-    (resolve) => {
-      setTimeout(() => {
-        resolve('x')
-      }, 2000);
+//  async function test() {
+//   return await new Promise(
+//     (resolve) => {
+//       setTimeout(() => {
+//         resolve('x')
+//       }, 2000);
 
-    }
-  )
+//     }
+//   )
+// }
+
+// test().then(
+//   (result) => {
+//     console.log(result);
+//   }
+// )
+
+
+/**
+ * memo sur les boucles
+ * 
+ */
+// for
+// const notes = [12,11,5,10,15];
+
+// for (let i = 0; i < notes.length; i++){
+//   console.log(notes[i]);
+// }
+
+//while
+
+// let x = Math.random()  // entre 0 et 1
+// while (x < 0.9) {
+//   x = Math.random()
+//   console.log(x);
+// }
+
+//do while
+// let x;
+
+// do {
+
+//   x = Math.random()
+//   console.log(x)
+// } while (x < 0.9);
+
+//for off
+// a ne pas utiliser sur un objet, dans ce cas plutot utiliser for in
+const notes = [12,11,5,10,15];
+for (const note of notes) {
+  console.log(note);
+  
 }
 
-test().then(
-  (result) => {
-    console.log(result);
-  }
-)
-  
+
+//for in
+/**on déclare un objet */
+const monObjectTest = {
+  a:1
+  b: "lol"
+  c: true
+}
+
+for (const key in monObjectTest) {
+  if (Object.hasOwnProperty.call(monObjectTest, key))
+  const element = monObjectTest[key]
+}
