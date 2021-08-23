@@ -1,3 +1,10 @@
+[class*="con"] {
+  padding: 1rem;
+  background-color: #9e33e5;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+}
 [class*="col"] {
   padding: 1rem;
   background-color: #33b5e5;
@@ -6,10 +13,9 @@
   text-align: center;
 }
 
-
-[class*="con"] {
+[class*="row"] {
   padding: 1rem;
-  background-color: #9e33e5;
+  background-color: #20d42f;
   border: 2px solid #fff;
   color: #fff;
   text-align: center;
