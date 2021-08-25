@@ -17,6 +17,7 @@ title.innerText = "Nouveau Titre"
 title.innerHTML = '<strong>Nouveau</strong> titre';
 
 //selectionner par les class (renvoi un tableau)
-let citations = document.getElementsByClassName('citation');
-console.log('citations');
+let citation = document.getElementsByClassName('citation');
+console.log(citation);
+console.log(citation[1]);
 
