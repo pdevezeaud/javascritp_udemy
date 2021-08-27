@@ -1,0 +1,12 @@
+.gris {
+  background-color: #aaa ;
+}
+
+.check {
+  color:green;
+  margin-left: 5px;
+}
+
+li:hover {
+  cursor: pointer;
+}
