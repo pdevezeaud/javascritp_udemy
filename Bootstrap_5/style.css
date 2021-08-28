@@ -1,0 +1,27 @@
+[class*="con"] {
+  padding: 1rem;
+  background-color: #9e33e5;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+}
+[class*="col"] {
+  padding: 1rem;
+  background-color: #33b5e5;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+}
+
+[class*="row"] {
+  padding: 1rem;
+  background-color: #20d42f;
+  border: 2px solid #fff;
+  color: #fff;
+  text-align: center;
+}
+
+.card {
+  color: black;
+  font-size: 10px;;
+}
