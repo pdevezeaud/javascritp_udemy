@@ -3,6 +3,7 @@
  */
 
 // Figures
+
 const suits = ['<span class=\'bold\'>&#9824</span>', '<span class=\'bold\'>&#9827</span>', '<span class=\'bold red-card\'>&#9829</span>', '<span class=\'bold red-card\'>&#9830</span>'];
 // Valeurs
 const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'V', 'D', 'R'];
@@ -12,7 +13,8 @@ let deck;
 
 function newGame() {
     deck = shuffleDeck();
-    let playerHand = [];let delearHand = [];
+    let playerHand = [];
+    let delearHand = [];
     document.getElementsByClassName("new-game-button")[0].classList.add("hidden");
     delearHand.push(deck.pop());
     delearHand.push(deck.pop());
