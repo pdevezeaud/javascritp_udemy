@@ -3,16 +3,17 @@
  */
 
 // Figures
-const suits = ['pique', 'trèfle', 'coeur', 'carreau'];
+const suits = ['<span class=\'bold\'>&#9824</span>', '<span class=\'bold\'>&#9827</span>', '<span class=\'bold red-card\'>&#9829</span>', '<span class=\'bold red-card\'>&#9830</span>'];
 // Valeurs
-const values = ['Ace', 'Deux', 'trois', 'Quatre', 'Cinq', 'Six', 'Sept', 'Huit', 'Neuf', 'Dix', 'Valet', 'Dame', 'Roi'];
+const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'V', 'D', 'R'];
 
 //La main du joueur
-let playerHand = [];
-let delearHand = [];
+let deck;
 
 function newGame() {
-    let deck = shuffleDeck();
+    deck = shuffleDeck();
+    let playerHand = [];let delearHand = [];
+    document.getElementsByClassName("new-game-button")[0].classList.add("hidden");
     delearHand.push(deck.pop());
     delearHand.push(deck.pop());
     playerHand.push(deck.pop());
@@ -22,12 +23,12 @@ function newGame() {
 
 function createDeck() {
     //Init deck
-    let deck = [];
+    deck = [];
     //on recupere les cartes figures
     for (let suit in suits) {
         // puis on recup les valeurs
         for (let value in values) {
-            deck.push(`${values[value]} de ${suits[suit]}`)
+            deck.push(`${values[value]}  ${suits[suit]}`);
         }
     }
 
@@ -41,7 +42,7 @@ function createDeck() {
 
 function shuffleDeck() {
     // appelle du deck
-    let deck = createDeck();
+    deck = createDeck();
     console.log(deck)
         //m et le nombre de carte dans le deck
     let m = deck.length;
