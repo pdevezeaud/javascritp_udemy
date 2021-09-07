@@ -20,7 +20,7 @@ function newGame() {
     delearHand.push(deck.pop());
     playerHand.push(deck.pop());
     playerHand.push(deck.pop());
-    console.log(`Dealer: ${delearHand[0]}, ${delearHand[1]}`, `\nJoueur: ${playerHand[0]}, ${playerHand[1]}`)
+    //console.log(`Dealer: ${delearHand[0]}, ${delearHand[1]}`, `\nJoueur: ${playerHand[0]}, ${playerHand[1]}`)
 }
 
 function createDeck() {
@@ -58,6 +58,46 @@ function shuffleDeck() {
     }
     console.log(deck);
     return deck;
+}
+
+//convertir valeur des cartes distribue
+
+function convertValuesInNumber(values) {
+    let hand = [];
+
+    for(card in values){
+        let cardValue = values[card].split(" ")[0];
+        
+        switch(cardValue) {
+            case 'A':
+                hand.push(1); break;
+            case '2':
+                hand.push(2); break;
+            case '3':
+                hand.push(3); break;
+            case '4':
+                hand.push(4); break;
+            case '5':
+                hand.push(5); break;
+            case '6':
+                hand.push(6); break;
+            case '7':
+                hand.push(7); break;
+            case '8':
+                hand.push(8); break;
+            case '9':
+                hand.push(9); break;
+            case '10':
+            case 'V':
+            case 'D':
+            case 'R':
+                hand.push(10); break;
+            default:console.log("Erreur !!");
+            
+        }
+    }
+
+    return hand;
 }
 
 
